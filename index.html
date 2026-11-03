@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Số liệu kênh GuessIt</title>
+<style>
+/* Layout: channel totals, channel page facts, weekly comparison, then a sortable table of all videos. */
+:root{--surface:#fcfcfb;--page:#f9f9f7;--ink:#0b0b0b;--ink2:#52514e;--grid:#e1e0d9;--ring:rgba(11,11,11,.10);--series:#2a78d6;--font:system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--surface:#1a1a19;--page:#0d0d0d;--ink:#f0efec;--ink2:#c3c2b7;--grid:#2c2c2a;--ring:rgba(255,255,255,.10);--series:#3987e5}}
+:root[data-theme="dark"]{color-scheme:dark;--surface:#1a1a19;--page:#0d0d0d;--ink:#f0efec;--ink2:#c3c2b7;--grid:#2c2c2a;--ring:rgba(255,255,255,.10);--series:#3987e5}
+body{margin:0;background:var(--page);color:var(--ink);font:15px/1.5 var(--font)}
+main{max-width:1080px;margin:0 auto;padding:32px 20px;display:grid;gap:20px}
+h1{font-size:24px;margin:0;text-wrap:balance} h2{font-size:16px;margin:0 0 4px}
+header p,.note{margin:4px 0 0;color:var(--ink2);font-size:13px} .note{max-width:75ch}
+a{color:inherit} :focus-visible{outline:2px solid var(--series);outline-offset:2px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:8px;padding:16px;min-width:0}
+.label{color:var(--ink2);font-size:13px} .value{font-size:32px;font-weight:600;line-height:1.3} .value.none{font-size:18px;padding:5px 0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:12px 0 0} dt{color:var(--ink2);font-size:13px} dd{margin:0}
+ul{margin:12px 0 0;padding-left:18px;display:grid;gap:6px}
+.wrap{overflow-x:auto;margin-top:12px} table{width:100%;border-collapse:collapse} #videos{min-width:860px}
+th{text-align:left;font-size:12px;font-weight:500;color:var(--ink2);padding:6px 10px 6px 0;border-bottom:1px solid var(--grid);white-space:nowrap}
+td{padding:8px 10px 8px 0;border-bottom:1px solid var(--grid)} tr:last-child td{border-bottom:0}
+th button{all:unset;cursor:pointer;text-decoration:underline dotted} th[aria-sort] button{color:var(--ink);font-weight:600;text-decoration:none}
+.num{font-variant-numeric:tabular-nums} .r{text-align:right} td:last-child,th:last-child{padding-right:0}
+.vc{display:flex;align-items:center;gap:8px;min-width:190px} .bar{display:block;height:14px;min-width:3px;background:var(--series);border-radius:0 4px 4px 0}
+.chip{font-size:11px;border:1px solid var(--ring);border-radius:4px;padding:0 5px;color:var(--ink2);white-space:nowrap}
+h3{font-size:14px;margin:16px 0 0} ol{margin:8px 0 0;padding-left:20px;display:grid;gap:6px} .adv{gap:8px 24px} .adv ul{margin-top:8px}
+</style></head><body><main>
+<header><h1>Kênh GuessIt</h1><p>22 video công khai · số liệu lúc 09:08 03/11/2026 (giờ Việt Nam) · <a href="https://www.youtube.com/@GuessItTrivia-f8p" target="_blank" rel="noopener">@GuessItTrivia-f8p</a></p></header>
+<section class="tiles" aria-label="Tổng toàn kênh">
+<div class="card"><div class="label">Lượt xem</div><div class="value">1.379</div></div>
+<div class="card"><div class="label">Lượt like</div><div class="value">19</div></div>
+<div class="card"><div class="label">Comment</div><div class="value">1</div></div>
+<div class="card"><div class="label">Người đăng ký</div><div class="value">5</div></div>
+<div class="card"><div class="label">Lượt share</div><div class="value none">Chưa có dữ liệu</div><p class="note">Chỉ có trong YouTube Studio hoặc Analytics API của chủ kênh.</p></div>
+</section>
+<div class="two">
+<section class="card"><h2>Trang kênh</h2><dl>
+<dt>Ngày lập</dt><dd>30/09/2026</dd>
+<dt>Nội dung</dt><dd>21 video dài, 1 Short, chưa có playlist</dd>
+<dt>Nhịp đăng</dt><dd>22 video trong 32 ngày</dd>
+<dt>Lượt xem trang kênh</dt><dd>1.326 theo trang kênh, lệch với tổng 1.379 cộng từ từng video</dd>
+<dt>Mô tả</dt><dd>“Daily quiz challenges” và “New quiz videos every week”: hai câu nói hai nhịp đăng khác nhau</dd>
+</dl></section>
+<section class="card"><h2>So sánh nhanh</h2><ul>
+<li>What Are the Most Fascinating Musical Instruments Around the World?🌍🎶: 417 lượt xem, chiếm 30% cả kênh.</li>
+<li>3 video đứng đầu chiếm 51% lượt xem. Video ở giữa bảng chỉ có 24,5 lượt.</li>
+<li>Cứ 100 lượt xem có 1,4 like. Cả kênh mới có 1 comment.</li>
+<li>Short duy nhất có 2 lượt xem, nên chưa đủ để so với video dài.</li>
+</ul></section>
+</div>
+<section class="card" id="gop-y"><h2>Góp ý: vì sao video nhiều hay ít lượt xem</h2>
+<p class="note">Kênh còn nhỏ nên chênh vài chục lượt có thể chỉ là ngẫu nhiên. Số công khai cho biết video nào hơn, chưa cho biết vì sao. Nguyên nhân chắc chắn phải xem nguồn lượt xem, tỷ lệ bấm vào thumbnail (CTR) và thời lượng xem trong YouTube Studio, nên mỗi ý đều ghi rõ mức độ chắc chắn.</p>
+<div class="two adv">
+<div><h3>Video nhiều lượt xem</h3><ul>
+<li><span class="chip">Giả thuyết</span> <b>Chủ đề đại chúng, ai cũng biết:</b> nhạc cụ 417, phim 180, động vật biển 112, món ăn 110 và 96, chim 99. Ngoại lệ: bóng đá chỉ 26, nhóm nhạc 36.</li>
+<li><span class="chip">Có số liệu</span> <b>Đăng sớm hơn nên có nhiều thời gian hơn:</b> video dài trên 14 ngày có trung vị 96 lượt, video mới hơn chỉ 10. Điều này giải thích một phần, không phải tất cả.</li>
+<li><span class="chip">Giả thuyết</span> <b>Thumbnail chữ to, ít chi tiết:</b> "Movie Quiz" và "World Food Challenge" đọc được ngay. Ngoại lệ: video nhạc cụ đứng đầu lại có thumbnail khá nhiều chi tiết.</li>
+<li><span class="chip">Cần Studio</span> <b>Video nhạc cụ 417 lượt:</b> chiếm 30% cả kênh nhưng chưa rõ lượt xem đến từ đâu, có thể là một đợt gợi ý của YouTube.</li>
+</ul></div>
+<div><h3>Video ít lượt xem</h3><ul>
+<li><span class="chip">Lỗi đã xác nhận</span> <b>"Plants Quiz" dùng nhầm thumbnail:</b> tiêu đề nói về thực vật nhưng ảnh ghi "Can You Identify These Planets?". Video này có 9 lượt.</li>
+<li><span class="chip">Giả thuyết</span> <b>Chủ đề hẹp hoặc giống bài học:</b> phát minh 1, tiền tệ 8, thời tiết 6, hình học 12. Cà phê 8 cũng thấp dù cùng nhóm đồ ăn.</li>
+<li><span class="chip">Có số liệu</span> <b>Video mới chưa đủ thời gian:</b> Christmas 5 và Olympic Badminton 3 mới đăng dưới 1 tuần, chưa nên kết luận. Ngược lại, thời tiết và cà phê đã đăng gần 3 tuần vẫn dưới 10 lượt.</li>
+<li><span class="chip">Giả thuyết</span> <b>Thumbnail nhiều chữ nhỏ:</b> thời tiết, tiền tệ, cây cối có nhiều nhãn phụ, khó đọc khi hiển thị nhỏ trên điện thoại.</li>
+<li><span class="chip">Giả thuyết</span> <b>Giờ đăng:</b> 4 video đăng thứ Hai có trung vị 6 lượt, 3 video thứ Sáu là 110. Mẫu quá nhỏ, chỉ đáng thử chứ chưa đủ để kết luận.</li>
+</ul></div>
+</div>
+<h3>Cần làm gì, theo thứ tự</h3><ol>
+<li><b>Hôm nay:</b> thay thumbnail đúng cho "Plants Quiz".</li>
+<li><b>Hôm nay:</b> trong Studio, xem nguồn lượt xem, CTR và thời lượng xem của video nhạc cụ và phim, so với hai video thấp là phát minh và tiền tệ. CTR thấp thì sửa thumbnail và tiêu đề; xem ít thời lượng thì sửa nội dung; ít lượt hiển thị thì xem lại chủ đề.</li>
+<li><b>Tuần này:</b> làm 3 đến 5 video nối tiếp các chủ đề đang tốt (phim, món ăn, động vật, "10 amazing ... around the world"), tạm giảm chủ đề hẹp.</li>
+<li><b>Tuần này:</b> dùng tính năng thử nghiệm thumbnail trong Studio cho các video chủ đề tốt mà ít lượt xem, như bóng đá và nhóm nhạc: 2 đến 4 chữ thật to, một hình chính.</li>
+<li><b>Tuần này:</b> tạo playlist theo chủ đề (kênh chưa có playlist nào) và sửa mô tả kênh về một nhịp đăng thống nhất.</li>
+<li><b>Mỗi video mới:</b> mời người xem comment số điểm của họ và ghim comment đó, vì cả kênh mới có 1 comment. Thêm chapter: 2 video đứng đầu đều có chapter, nhưng chưa đủ để nói đó là nguyên nhân.</li>
+<li><b>Thử 4 tuần:</b> đăng 5 đến 10 Short cắt từ video tốt nhất, và thử cố định khung giờ đăng. Cả Short và giờ đăng hiện chưa đủ dữ liệu.</li>
+</ol>
+<p class="note"><b>Cách đo:</b> so sánh lượt xem trong 7 ngày đầu của từng video (lấy trong Studio), không so tổng lượt xem, vì video cũ luôn có lợi thế về thời gian.</p>
+</section>
+
+<section class="card"><h2>So sánh theo tuần đăng</h2><p class="note">Video đăng càng sớm càng có nhiều thời gian lấy lượt xem, nên các tuần gần đây chưa ngang hàng với tuần đầu.</p><div class="wrap"><table>
+<thead><tr><th>Tuần đăng</th><th class="r">Số video</th><th>Tổng lượt xem</th><th class="r">Lượt xem giữa bảng</th><th class="r">Like</th><th class="r">Comment</th></tr></thead><tbody>
+<tr><td class="num">28/09 – 04/10</td><td class="num r">3</td><td><div class="vc"><span class="bar" style="width:104.1px"></span><span class="num">388</span></div></td><td class="num r">112,0</td><td class="num r">3</td><td class="num r">0</td></tr>
+<tr><td class="num">05/10 – 11/10</td><td class="num r">4</td><td><div class="vc"><span class="bar" style="width:150.0px"></span><span class="num">559</span></div></td><td class="num r">66,5</td><td class="num r">3</td><td class="num r">0</td></tr>
+<tr><td class="num">12/10 – 18/10</td><td class="num r">4</td><td><div class="vc"><span class="bar" style="width:49.4px"></span><span class="num">184</span></div></td><td class="num r">39,5</td><td class="num r">3</td><td class="num r">0</td></tr>
+<tr><td class="num">19/10 – 25/10</td><td class="num r">5</td><td><div class="vc"><span class="bar" style="width:22.3px"></span><span class="num">83</span></div></td><td class="num r">12,0</td><td class="num r">3</td><td class="num r">0</td></tr>
+<tr><td class="num">26/10 – 01/11</td><td class="num r">5</td><td><div class="vc"><span class="bar" style="width:42.9px"></span><span class="num">160</span></div></td><td class="num r">6,0</td><td class="num r">5</td><td class="num r">0</td></tr>
+<tr><td class="num">02/11 – 08/11</td><td class="num r">1</td><td><div class="vc"><span class="bar" style="width:1.3px"></span><span class="num">5</span></div></td><td class="num r">5,0</td><td class="num r">2</td><td class="num r">1</td></tr>
+</tbody></table></div></section>
+<section class="card"><h2>Tất cả 22 video</h2><p class="note">Bấm tên cột để sắp xếp. “–” ở Like và Comment: YouTube không hiển thị số, thường là 0. “–” ở Like/100 xem: chưa có like hoặc dưới 20 lượt xem, quá ít để tính tỷ lệ.</p><div class="wrap"><table id="videos">
+<thead><tr><th><button>Video</button></th><th><button>Ngày đăng</button></th><th><button>Dài</button></th><th aria-sort="descending"><button>Lượt xem</button></th><th class="r"><button>Like</button></th><th class="r"><button>Comment</button></th><th class="r"><button>Like/100 xem</button></th><th class="r"><button>Xem/ngày</button></th></tr></thead><tbody>
+<tr><td class="t" data-v="What Are the Most Fascinating Musical Instruments Around the World?🌍🎶"><a href="https://www.youtube.com/watch?v=QHI821fkbj4" target="_blank" rel="noopener">What Are the Most Fascinating Musical Instruments Around the World?🌍🎶</a></td><td class="num" data-v="1791515721">09/10</td><td class="num" data-v="482">8:02</td><td data-v="417"><div class="vc"><span class="bar" style="width:150.0px"></span><span class="num">417</span></div></td><td class="num r" data-v="3">3</td><td class="num r" data-v="0">0</td><td class="num r" data-v="0.719">0,7</td><td class="num r" data-v="16.711">16,7</td></tr>
+<tr><td class="t" data-v="Famous Movies Quiz 🎬 Can You Guess the Movie?"><a href="https://www.youtube.com/watch?v=lzH-presEOU" target="_blank" rel="noopener">Famous Movies Quiz 🎬 Can You Guess the Movie?</a></td><td class="num" data-v="1790994603">03/10</td><td class="num" data-v="480">8:00</td><td data-v="180"><div class="vc"><span class="bar" style="width:64.7px"></span><span class="num">180</span></div></td><td class="num r" data-v="3">3</td><td class="num r" data-v="0">0</td><td class="num r" data-v="1.667">1,7</td><td class="num r" data-v="5.809">5,8</td></tr>
+<tr><td class="t" data-v="How Well Do You Know Ocean Animals? 🦈"><a href="https://www.youtube.com/watch?v=LqlLujYLHiE" target="_blank" rel="noopener">How Well Do You Know Ocean Animals? 🦈</a></td><td class="num" data-v="1790777539">30/09</td><td class="num" data-v="360">6:00</td><td data-v="112"><div class="vc"><span class="bar" style="width:40.3px"></span><span class="num">112</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="3.344">3,3</td></tr>
+<tr><td class="t" data-v="World Food Quiz: Which Country Is This Dish From? 🍔 🌮"><a href="https://www.youtube.com/watch?v=Yo7Wpa4LS5U" target="_blank" rel="noopener">World Food Quiz: Which Country Is This Dish From? 🍔 🌮</a></td><td class="num" data-v="1791543629">09/10</td><td class="num" data-v="479">7:59</td><td data-v="110"><div class="vc"><span class="bar" style="width:39.6px"></span><span class="num">110</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="4.466">4,5</td></tr>
+<tr><td class="t" data-v="The Amazing World of Birds: What Makes Each Species Unique? 🕊️🌎"><a href="https://www.youtube.com/watch?v=EpZl3cKTJTU" target="_blank" rel="noopener">The Amazing World of Birds: What Makes Each Species Unique? 🕊️🌎</a></td><td class="num" data-v="1792105219">16/10</td><td class="num" data-v="480">8:00</td><td data-v="99"><div class="vc"><span class="bar" style="width:35.6px"></span><span class="num">99</span></div></td><td class="num r" data-v="2">2</td><td class="num r" data-v="0">0</td><td class="num r" data-v="2.020">2,0</td><td class="num r" data-v="5.460">5,5</td></tr>
+<tr><td class="t" data-v="Guess the Country by Its Food 🍜 World Food Quiz"><a href="https://www.youtube.com/watch?v=_WIm1blRA2E" target="_blank" rel="noopener">Guess the Country by Its Food 🍜 World Food Quiz</a></td><td class="num" data-v="1790856017">01/10</td><td class="num" data-v="579">9:39</td><td data-v="96"><div class="vc"><span class="bar" style="width:34.5px"></span><span class="num">96</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="2.946">2,9</td></tr>
+<tr><td class="t" data-v="Can You Guess the Planet From Its Amazing Fact?"><a href="https://www.youtube.com/watch?v=Xmpx_JLbIik" target="_blank" rel="noopener">Can You Guess the Planet From Its Amazing Fact?</a></td><td class="num" data-v="1793184515">28/10</td><td class="num" data-v="491">8:11</td><td data-v="78"><div class="vc"><span class="bar" style="width:28.1px"></span><span class="num">78</span></div></td><td class="num r" data-v="2">2</td><td class="num r" data-v="0">0</td><td class="num r" data-v="2.564">2,6</td><td class="num r" data-v="13.832">13,8</td></tr>
+<tr><td class="t" data-v="How Well Do You Know These Sweet Treats ? 🍪"><a href="https://www.youtube.com/watch?v=wvnO-s9aeo4" target="_blank" rel="noopener">How Well Do You Know These Sweet Treats ? 🍪</a></td><td class="num" data-v="1793115971">27/10</td><td class="num" data-v="480">8:00</td><td data-v="71"><div class="vc"><span class="bar" style="width:25.5px"></span><span class="num">71</span></div></td><td class="num r" data-v="1">1</td><td class="num r" data-v="0">0</td><td class="num r" data-v="1.408">1,4</td><td class="num r" data-v="11.038">11,0</td></tr>
+<tr><td class="t" data-v="Can You Name These Flowers?🌺🌼"><a href="https://www.youtube.com/watch?v=2p12fMEhdCI" target="_blank" rel="noopener">Can You Name These Flowers?🌺🌼</a></td><td class="num" data-v="1791863249">13/10</td><td class="num" data-v="495">8:15</td><td data-v="71"><div class="vc"><span class="bar" style="width:25.5px"></span><span class="num">71</span></div></td><td class="num r" data-v="1">1</td><td class="num r" data-v="0">0</td><td class="num r" data-v="1.408">1,4</td><td class="num r" data-v="3.392">3,4</td></tr>
+<tr><td class="t" data-v="Can You Guess These Famous Music Groups? 🎵🌎"><a href="https://www.youtube.com/watch?v=02X_iUnYvbQ" target="_blank" rel="noopener">Can You Guess These Famous Music Groups? 🎵🌎</a></td><td class="num" data-v="1792662697">22/10</td><td class="num" data-v="479">7:59</td><td data-v="36"><div class="vc"><span class="bar" style="width:12.9px"></span><span class="num">36</span></div></td><td class="num r" data-v="1">1</td><td class="num r" data-v="0">0</td><td class="num r" data-v="2.778">2,8</td><td class="num r" data-v="3.083">3,1</td></tr>
+<tr><td class="t" data-v="Can You Guess These Famous Football Clubs Around the World? ⚽️"><a href="https://www.youtube.com/watch?v=DCdE25tRkzQ" target="_blank" rel="noopener">Can You Guess These Famous Football Clubs Around the World? ⚽️</a></td><td class="num" data-v="1792537222">21/10</td><td class="num" data-v="480">8:00</td><td data-v="26"><div class="vc"><span class="bar" style="width:9.4px"></span><span class="num">26</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="1.980">2,0</td></tr>
+<tr><td class="t" data-v="Solar System Quiz 🪐 How Well Do You Know the Planets?"><a href="https://www.youtube.com/watch?v=XNz-gNDvuSo" target="_blank" rel="noopener">Solar System Quiz 🪐 How Well Do You Know the Planets?</a></td><td class="num" data-v="1791415812">08/10</td><td class="num" data-v="521">8:41</td><td data-v="23"><div class="vc"><span class="bar" style="width:8.3px"></span><span class="num">23</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.881">0,9</td></tr>
+<tr><td class="t" data-v="Can You Find These Geometric Shapes Around You?🔽⚪️"><a href="https://www.youtube.com/watch?v=zCgZx2Y-y4E" target="_blank" rel="noopener">Can You Find These Geometric Shapes Around You?🔽⚪️</a></td><td class="num" data-v="1792623629">22/10</td><td class="num" data-v="484">8:04</td><td data-v="12"><div class="vc"><span class="bar" style="width:4.3px"></span><span class="num">12</span></div></td><td class="num r" data-v="1">1</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.989">1,0</td></tr>
+<tr><td class="t" data-v="Plants Quiz 🌿 Can You Guess the Plant?"><a href="https://www.youtube.com/watch?v=iDM0to9lKLA" target="_blank" rel="noopener">Plants Quiz 🌿 Can You Guess the Plant?</a></td><td class="num" data-v="1791210259">05/10</td><td class="num" data-v="559">9:19</td><td data-v="9"><div class="vc"><span class="bar" style="width:3.2px"></span><span class="num">9</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.316">0,3</td></tr>
+<tr><td class="t" data-v="Can You Guess These Currencies from Around the World?💸"><a href="https://www.youtube.com/watch?v=TJ6WB0vWaME" target="_blank" rel="noopener">Can You Guess These Currencies from Around the World?💸</a></td><td class="num" data-v="1792578566">21/10</td><td class="num" data-v="480">8:00</td><td data-v="8"><div class="vc"><span class="bar" style="width:2.9px"></span><span class="num">8</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.632">0,6</td></tr>
+<tr><td class="t" data-v="Coffee Around the World: How Well Do You Know Your Cup? ☕️"><a href="https://www.youtube.com/watch?v=PYUi3EtdARY" target="_blank" rel="noopener">Coffee Around the World: How Well Do You Know Your Cup? ☕️</a></td><td class="num" data-v="1791949376">14/10</td><td class="num" data-v="479">7:59</td><td data-v="8"><div class="vc"><span class="bar" style="width:2.9px"></span><span class="num">8</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.401">0,4</td></tr>
+<tr><td class="t" data-v="How Much Do You Know About Trees and Plants? 🌳"><a href="https://www.youtube.com/watch?v=KVxdUXv41IM" target="_blank" rel="noopener">How Much Do You Know About Trees and Plants? 🌳</a></td><td class="num" data-v="1793006227">26/10</td><td class="num" data-v="481">8:01</td><td data-v="6"><div class="vc"><span class="bar" style="width:2.2px"></span><span class="num">6</span></div></td><td class="num r" data-v="2">2</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.779">0,8</td></tr>
+<tr><td class="t" data-v="What Causes These Weather and Natural Phenomena? ⛈️🌊"><a href="https://www.youtube.com/watch?v=kpnGOZ9i_Cg" target="_blank" rel="noopener">What Causes These Weather and Natural Phenomena? ⛈️🌊</a></td><td class="num" data-v="1791810924">12/10</td><td class="num" data-v="480">8:00</td><td data-v="6"><div class="vc"><span class="bar" style="width:2.2px"></span><span class="num">6</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.279">0,3</td></tr>
+<tr><td class="t" data-v="How Much Do You Know About Christmas? 🎄🎅"><a href="https://www.youtube.com/watch?v=qDK8yzf2GOs" target="_blank" rel="noopener">How Much Do You Know About Christmas? 🎄🎅</a></td><td class="num" data-v="1793605779">02/11</td><td class="num" data-v="481">8:01</td><td data-v="5"><div class="vc"><span class="bar" style="width:1.8px"></span><span class="num">5</span></div></td><td class="num r" data-v="2">2</td><td class="num r" data-v="1">1</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="5.000">5,0</td></tr>
+<tr><td class="t" data-v="How Well Do You Know Olympic Badminton?"><a href="https://www.youtube.com/watch?v=O0qB-m4yFa0" target="_blank" rel="noopener">How Well Do You Know Olympic Badminton?</a></td><td class="num" data-v="1793283212">29/10</td><td class="num" data-v="482">8:02</td><td data-v="3"><div class="vc"><span class="bar" style="width:1.1px"></span><span class="num">3</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.667">0,7</td></tr>
+<tr><td class="t" data-v="World Food Quiz: Which Country Is This Dish From?"><a href="https://www.youtube.com/watch?v=NLoXwNkOT0w" target="_blank" rel="noopener">World Food Quiz: Which Country Is This Dish From?</a> <span class=chip>Short</span></td><td class="num" data-v="1793156548">28/10</td><td class="num" data-v="60">1:00</td><td data-v="2"><div class="vc"><span class="bar" style="width:0.7px"></span><span class="num">2</span></div></td><td class="num r" data-v="0">–</td><td class="num r" data-v="0">–</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.335">0,3</td></tr>
+<tr><td class="t" data-v="Can You Guess These World-Changing Inventions?💡"><a href="https://www.youtube.com/watch?v=SLSdIDOaU4U" target="_blank" rel="noopener">Can You Guess These World-Changing Inventions?💡</a></td><td class="num" data-v="1792450839">20/10</td><td class="num" data-v="480">8:00</td><td data-v="1"><div class="vc"><span class="bar" style="width:0.4px"></span><span class="num">1</span></div></td><td class="num r" data-v="1">1</td><td class="num r" data-v="0">0</td><td class="num r" data-v="-1.000">–</td><td class="num r" data-v="0.071">0,1</td></tr>
+</tbody></table></div></section>
+</main><script>
+const table=document.getElementById("videos"),body=table.tBodies[0],heads=[...table.tHead.rows[0].cells];
+heads.forEach((th,i)=>th.querySelector("button").addEventListener("click",()=>{
+  const dir=th.getAttribute("aria-sort")==="descending"?1:-1;
+  const key=r=>r.cells[i].dataset.v, text=i===0;
+  const sorted=[...body.rows].sort((a,b)=>dir*(text?key(a).localeCompare(key(b),"vi"):key(a)-key(b)));
+  heads.forEach(h=>h.removeAttribute("aria-sort"));
+  th.setAttribute("aria-sort",dir===1?"ascending":"descending");
+  body.append(...sorted);
+}));
+</script></body></html>
